@@ -55,16 +55,18 @@ Citizen.CreateThread(function()
     while true do
         local wait = 700
         local playerPos = GetEntityCoords(PlayerPedId())
-        for k,v in pairs(tablepositionsandblips) do
-            local PositionArmurerie = vec3(v.pos)
-            local dst1 = #(playerPos - PositionArmurerie)
-            if dst1 < 5.0 then
-                wait = 0
-                DrawMarker(_ArmurerieLSPD.Markers.Type, PositionArmurerie.x, PositionArmurerie.y, PositionArmurerie.z, 0, 0, 0, 0, 0, 0, _ArmurerieLSPD.Markers.TailleX, _ArmurerieLSPD.Markers.TailleY, _ArmurerieLSPD.Markers.TailleZ, _ArmurerieLSPD.Markers.CouleurR, _ArmurerieLSPD.Markers.CouleurG, _ArmurerieLSPD.Markers.CouleurB, _ArmurerieLSPD.Markers.Opacite, 0, 0, 0, 1, 0, 0, 0)
-                if dst1 < 1.5 then
-                    ESX.ShowHelpNotification(_ArmurerieLSPD.Translations.Menu.HelpNotif)
-                    if IsControlJustReleased(1, 38) then
-                        _ArmurerieLSPD.Menu:Main()
+        if ESX.PlayerData.job ~= nil and ESX.PlayerData.job.name == _ArmurerieLSPD.JobAcces then
+            for k,v in pairs(tablepositionsandblips) do
+                local PositionArmurerie = vec3(v.pos)
+                local dst1 = #(playerPos - PositionArmurerie)
+                if dst1 < 5.0 then
+                    wait = 0
+                    DrawMarker(_ArmurerieLSPD.Markers.Type, PositionArmurerie.x, PositionArmurerie.y, PositionArmurerie.z, 0, 0, 0, 0, 0, 0, _ArmurerieLSPD.Markers.TailleX, _ArmurerieLSPD.Markers.TailleY, _ArmurerieLSPD.Markers.TailleZ, _ArmurerieLSPD.Markers.CouleurR, _ArmurerieLSPD.Markers.CouleurG, _ArmurerieLSPD.Markers.CouleurB, _ArmurerieLSPD.Markers.Opacite, 0, 0, 0, 1, 0, 0, 0)
+                    if dst1 < 1.5 then
+                        ESX.ShowHelpNotification(_ArmurerieLSPD.Translations.Menu.HelpNotif)
+                        if IsControlJustReleased(1, 38) then
+                            _ArmurerieLSPD.Menu:Main()
+                        end
                     end
                 end
             end
