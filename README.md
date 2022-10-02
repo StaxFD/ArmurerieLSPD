@@ -28,7 +28,9 @@ Exemple pour les armes en objets :
 {name = "weapon_combatpistol", label = "Pistolet de combat", price = 500, Maxstock = 20, grade = 0},
 
 price = au prix de l'arme ,
+
 Maxstock = au nombre d'arme maximum dans le stock,
+
 grade = au grade minimum pour prendre l'arme,
 
 https://discord.gg/g9dXrcAcwn 
