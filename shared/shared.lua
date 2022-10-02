@@ -5,6 +5,7 @@ _ArmurerieLSPD = {
     Event = {
         Prefix = "_/Stax_/",
     },
+    JobAcces = "police",
     PositionsArmurerieLSPD = {
         {pos = vector3(452.0,  -980.0,  29.69), heading = 270.0}, --Position Menu	
     }, 
