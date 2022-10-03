@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `armurerie_lspd` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
-DROP TABLE IF EXISTS `armurerielspd_historique`;
-CREATE TABLE IF NOT EXISTS `armurerielspd_historique` (
+DROP TABLE IF EXISTS `armurerieLSPD_historique`;
+CREATE TABLE IF NOT EXISTS `armurerieLSPD_historique` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` text NOT NULL,
   `weapon` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '0',
