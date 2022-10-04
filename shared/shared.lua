@@ -49,7 +49,7 @@ _ArmurerieLSPD = {
         Scale = 0.65,
         Color = 2,
         Display = 4,
-        AsShortRange = true,
+        ShortRange = true,
         Name = "Armurerie LSPD",  
     },
     ["Translations"] = {
